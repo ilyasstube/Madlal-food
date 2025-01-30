@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -142,6 +143,30 @@
         footer a:hover {
             color: #fff;
         }
+        /* Option de commande */
+        .commander {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .commander button {
+            padding: 10px 20px;
+            background-color: #d4af37; /* Or */
+            color: #1a1a1a;
+            border: none;
+            border-radius: 24px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .commander button:hover {
+            background-color: #ffd700; /* Jaune plus clair */
+        }
+        .commander select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -174,13 +199,13 @@
             <div class="menu-item">
                 <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Burger">
                 <h3>Burger Classique</h3>
-                <p>Un burger juteux avec du bœuf Angus, du cheddar et des légumes frais.</p>
-                <span>60 DH</span>
+                <p>Un burger juteux avec du bœuf Angus, du cheddar affiné et des légumes frais.</p>
+                <span>65 DH</span>
             </div>
             <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Burger">
+                <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Burger">
                 <h3>Burger Végétarien</h3>
-                <p>Un burger savoureux avec des légumes grillés et une sauce maison.</p>
+                <p>Un burger savoureux avec des légumes grillés et une sauce spéciale.</p>
                 <span>55 DH</span>
             </div>
             <!-- Ajoutez 8 autres burgers ici -->
@@ -190,13 +215,13 @@
                 <img src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Tacos">
                 <h3>Tacos Mexicains</h3>
                 <p>Des tacos garnis de poulet mariné, de guacamole et de salsa maison.</p>
-                <span>50 DH</span>
+                <span>45 DH</span>
             </div>
             <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1624302265337-244c0f9e76f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Tacos">
-                <h3>Tacos Boeuf</h3>
+                <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Tacos">
+                <h3>Tacos au Boeuf</h3>
                 <p>Des tacos garnis de bœuf épicé, de fromage fondu et de légumes frais.</p>
-                <span>55 DH</span>
+                <span>50 DH</span>
             </div>
             <!-- Ajoutez 8 autres tacos ici -->
 
@@ -210,68 +235,53 @@
             <div class="menu-item">
                 <img src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Pizza">
                 <h3>Pizza Pepperoni</h3>
-                <p>Une pizza généreuse avec du pepperoni épicé et du fromage fondu.</p>
+                <p>Une pizza généreuse avec du pepperoni épicé et du fromage fondant.</p>
                 <span>75 DH</span>
             </div>
             <!-- Ajoutez 8 autres pizzas ici -->
 
             <!-- Plats de Poulet -->
             <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1625937323772-2f0b2a5a5f5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Poulet">
-                <h3>Poulet Rôti</h3>
-                <p>Un poulet rôti croustillant accompagné de légumes de saison.</p>
+                <img src="https://images.unsplash.com/photo-1603360946369-dc9bbf814ecf?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Poulet">
+                <h3>Poulet Grillée</h3>
+                <p>Un poulet grillé avec des épices maison et accompagné de légumes frais.</p>
                 <span>80 DH</span>
             </div>
             <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1606728035253-49e8a3a81b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Poulet">
-                <h3>Poulet Grillé</h3>
-                <p>Un poulet grillé mariné aux herbes, servi avec une sauce maison.</p>
+                <img src="https://images.unsplash.com/photo-1603360946369-dc9bbf814ecf?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Poulet">
+                <h3>Poulet Curry</h3>
+                <p>Un curry de poulet riche et savoureux, servi avec du riz basmati.</p>
                 <span>85 DH</span>
             </div>
             <!-- Ajoutez 8 autres plats de poulet ici -->
-
-            <!-- Jus -->
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Jus">
-                <h3>Jus d'Orange Pressé</h3>
-                <p>Un jus d'orange fraîchement pressé, riche en vitamines.</p>
-                <span>25 DH</span>
-            </div>
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Jus">
-                <h3>Jus de Mangue</h3>
-                <p>Un jus de mangue frais et sucré, parfait pour se rafraîchir.</p>
-                <span>30 DH</span>
-            </div>
-            <!-- Ajoutez 8 autres jus ici -->
 
             <!-- Glaces -->
             <div class="menu-item">
                 <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Glace">
                 <h3>Glace Vanille</h3>
-                <p>Une glace onctueuse à la vanille, parfaite pour les amateurs de classiques.</p>
-                <span>20 DH</span>
+                <p>Une glace onctueuse à la vanille, parfaite pour se rafraîchir.</p>
+                <span>25 DH</span>
             </div>
             <div class="menu-item">
                 <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Glace">
                 <h3>Glace Chocolat</h3>
-                <p>Une glace riche en chocolat, pour les amateurs de saveurs intenses.</p>
-                <span>25 DH</span>
+                <p>Une glace riche et crémeuse au chocolat, pour les amateurs de cacao.</p>
+                <span>30 DH</span>
             </div>
             <!-- Ajoutez 8 autres glaces ici -->
 
             <!-- Smoothies -->
             <div class="menu-item">
                 <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Smoothie">
-                <h3>Smoothie Tropical</h3>
-                <p>Un mélange exotique de mangue, ananas et banane.</p>
+                <h3>Smoothie Mangue</h3>
+                <p>Un smoothie rafraîchissant à la mangue, parfait pour l'été.</p>
                 <span>35 DH</span>
             </div>
             <div class="menu-item">
                 <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Smoothie">
                 <h3>Smoothie Fraise</h3>
-                <p>Un smoothie rafraîchissant à la fraise et au yaourt.</p>
-                <span>30 DH</span>
+                <p>Un smoothie sucré et acidulé à la fraise, idéal pour un en-cas.</p>
+                <span>35 DH</span>
             </div>
             <!-- Ajoutez 8 autres smoothies ici -->
         </div>
@@ -280,8 +290,7 @@
     <!-- Section À propos -->
     <section id="apropos">
         <h2>À propos de nous</h2>
-        <p>Madlal Food est un restaurant de luxe qui allie tradition et modernité. Nous nous engageons à vous offrir une expérience culinaire inoubliable. Notre équipe de chefs passionnés utilise des ingrédients frais et locaux pour créer des plats savoureux et raffinés. Que ce soit pour un déjeuner rapide ou un dîner gastronomique, Madlal Food est l'endroit idéal pour satisfaire vos papilles.</p>
-        <p>Nous croyons en la qualité, la créativité et le service exceptionnel. Venez découvrir pourquoi nos clients nous adorent !</p>
+        <p>Madlal Food est un restaurant de luxe qui allie tradition et modernité. Depuis notre ouverture, nous nous engageons à offrir une expérience culinaire inoubliable à nos clients. Notre équipe de chefs talentueux utilise des ingrédients frais et locaux pour créer des plats savoureux et raffinés. Que ce soit pour un déjeuner rapide ou un dîner gastronomique, Madlal Food est l'endroit idéal pour satisfaire vos envies.</p>
     </section>
 
     <!-- Section Avis -->
@@ -296,7 +305,7 @@
             <div class="avis-item">
                 <h3>Leila M.</h3>
                 <div class="stars">★★★★★</div>
-                <p>"J'ai adoré l'ambiance et les saveurs. Le poulet rôti est un régal !"</p>
+                <p>"J'ai adoré l'ambiance et les saveurs. Le poulet grillé est un régal !"</p>
             </div>
             <div class="avis-item">
                 <h3>Youssef L.</h3>
@@ -320,10 +329,150 @@
         <p>Email : ilyassmadlal18@gmail.com</p>
     </section>
 
-    <!-- Pied de page -->
-    <footer>
-        <p>&copy; 2025 Madlal Food. Tous droits réservés.</p>
-        <p><a href="#accueil">Retour en haut</a></p>
-    </footer>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander - Madlal Food</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Fond noir */
+            color: #fff;
+        }
+        header {
+            background-color: #d4af37; /* Or */
+            padding: 20px;
+            text-align: center;
+            color: #1a1a1a;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: #262626; /* Gris très foncé */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #d4af37; /* Or */
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .commander-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .commander-form label {
+            font-size: 18px;
+            color: #d4af37; /* Or */
+        }
+        .commander-form select, .commander-form input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+        }
+        .commander-form button {
+            padding: 10px 20px;
+            background-color: #d4af37; /* Or */
+            color: #1a1a1a;
+            border: none;
+            border-radius: 24px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .commander-form button:hover {
+            background-color: #ffd700; /* Jaune plus clair */
+        }
+        .confirmation {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #d4af37; /* Or */
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>Madlal Food</h1>
+        <p>Le luxe à portée de fourchette.</p>
+    </header>
+
+    <!-- Section de commande -->
+    <section>
+        <h2>Commandez vos plats</h2>
+        <form class="commander-form" onsubmit="finaliserCommande(event)">
+            <label for="plat1">Plat 1 :</label>
+            <select id="plat1" required>
+                <option value="">Choisissez un plat</option>
+                <option value="Burger Classique">Burger Classique - 65 DH</option>
+                <option value="Pizza Margherita">Pizza Margherita - 70 DH</option>
+                <option value="Tajine d'Agneau">Tajine d'Agneau - 80 DH</option>
+                <option value="Glace Vanille">Glace Vanille - 25 DH</option>
+            </select>
+
+            <label for="plat2">Plat 2 :</label>
+            <select id="plat2">
+                <option value="">Choisissez un plat</option>
+                <option value="Burger Classique">Burger Classique - 65 DH</option>
+                <option value="Pizza Margherita">Pizza Margherita - 70 DH</option>
+                <option value="Tajine d'Agneau">Tajine d'Agneau - 80 DH</option>
+                <option value="Glace Vanille">Glace Vanille - 25 DH</option>
+            </select>
+
+            <label for="plat3">Plat 3 :</label>
+            <select id="plat3">
+                <option value="">Choisissez un plat</option>
+                <option value="Burger Classique">Burger Classique - 65 DH</option>
+                <option value="Pizza Margherita">Pizza Margherita - 70 DH</option>
+                <option value="Tajine d'Agneau">Tajine d'Agneau - 80 DH</option>
+                <option value="Glace Vanille">Glace Vanille - 25 DH</option>
+            </select>
+
+            <button type="submit">Finaliser la commande</button>
+        </form>
+
+        <div class="confirmation" id="confirmation"></div>
+    </section>
+
+    <script>
+        function finaliserCommande(event) {
+            event.preventDefault(); // Empêche le rechargement de la page
+
+            // Récupérer les plats sélectionnés
+            const plat1 = document.getElementById('plat1').value;
+            const plat2 = document.getElementById('plat2').value;
+            const plat3 = document.getElementById('plat3').value;
+
+            // Afficher un message de confirmation
+            const confirmation = document.getElementById('confirmation');
+            confirmation.innerHTML = `
+                <p>Merci pour votre commande !</p>
+                <p>Veuillez appeler le <strong>+212 644018101</strong> pour confirmer.</p>
+                <p>Plats commandés : ${plat1}, ${plat2}, ${plat3}</p>
+            `;
+        }
+    </script>
 </body>
-  </html>
+</html>
