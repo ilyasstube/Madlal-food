@@ -382,7 +382,7 @@
             const platsText = platsCommandes.join("\n");
 
             // Envoi de l'email via EmailJS
-            emailjs.send(service_jas4mz7, template_hh9kdmi, {
+            emailjs.send("service_jas4mz7","template_hh9kdmi",{
                 plats: platsText,
             })
             .then(() => {
