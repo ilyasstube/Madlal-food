@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -102,6 +101,29 @@
             font-weight: bold;
             color: #fff;
         }
+        .commander {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .commander button {
+            padding: 10px 20px;
+            background-color: #d4af37; /* Or */
+            color: #1a1a1a;
+            border: none;
+            border-radius: 24px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .commander button:hover {
+            background-color: #ffd700; /* Jaune plus clair */
+        }
+        .commander select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
         .avis-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -142,30 +164,6 @@
         }
         footer a:hover {
             color: #fff;
-        }
-        /* Option de commande */
-        .commander {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .commander button {
-            padding: 10px 20px;
-            background-color: #d4af37; /* Or */
-            color: #1a1a1a;
-            border: none;
-            border-radius: 24px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .commander button:hover {
-            background-color: #ffd700; /* Jaune plus clair */
-        }
-        .commander select {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 10px;
-            margin-right: 10px;
         }
     </style>
 </head>
@@ -329,150 +327,73 @@
         <p>Email : ilyassmadlal18@gmail.com</p>
     </section>
 
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commander - Madlal Food</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        /* Styles généraux */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1a1a; /* Fond noir */
-            color: #fff;
-        }
-        header {
-            background-color: #d4af37; /* Or */
-            padding: 20px;
-            text-align: center;
-            color: #1a1a1a;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 48px;
-            font-weight: 700;
-            font-family: 'Playfair Display', serif;
-            animation: fadeIn 2s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        section {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 1200px;
-            background-color: #262626; /* Gris très foncé */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #d4af37; /* Or */
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .commander-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .commander-form label {
-            font-size: 18px;
-            color: #d4af37; /* Or */
-        }
-        .commander-form select, .commander-form input {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 10px;
-            border: none;
-        }
-        .commander-form button {
-            padding: 10px 20px;
-            background-color: #d4af37; /* Or */
-            color: #1a1a1a;
-            border: none;
-            border-radius: 24px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .commander-form button:hover {
-            background-color: #ffd700; /* Jaune plus clair */
-        }
-        .confirmation {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 18px;
-            color: #d4af37; /* Or */
-        }
-    </style>
-</head>
-<body>
-    <!-- En-tête -->
-    <header>
-        <h1>Madlal Food</h1>
-        <p>Le luxe à portée de fourchette.</p>
-    </header>
-
-    <!-- Section de commande -->
-    <section>
-        <h2>Commandez vos plats</h2>
-        <form class="commander-form" onsubmit="finaliserCommande(event)">
-            <label for="plat1">Plat 1 :</label>
-            <select id="plat1" required>
-                <option value="">Choisissez un plat</option>
+    <!-- Option de commande -->
+    <section class="commander">
+        <h2>Commandez maintenant</h2>
+        <div id="commande-plats">
+            <select class="choix-plat">
                 <option value="Burger Classique">Burger Classique - 65 DH</option>
+                <option value="Burger Végétarien">Burger Végétarien - 55 DH</option>
+                <option value="Tacos Mexicains">Tacos Mexicains - 45 DH</option>
+                <option value="Tacos au Boeuf">Tacos au Boeuf - 50 DH</option>
                 <option value="Pizza Margherita">Pizza Margherita - 70 DH</option>
-                <option value="Tajine d'Agneau">Tajine d'Agneau - 80 DH</option>
+                <option value="Pizza Pepperoni">Pizza Pepperoni - 75 DH</option>
+                <option value="Poulet Grillée">Poulet Grillée - 80 DH</option>
+                <option value="Poulet Curry">Poulet Curry - 85 DH</option>
                 <option value="Glace Vanille">Glace Vanille - 25 DH</option>
+                <option value="Glace Chocolat">Glace Chocolat - 30 DH</option>
+                <option value="Smoothie Mangue">Smoothie Mangue - 35 DH</option>
+                <option value="Smoothie Fraise">Smoothie Fraise - 35 DH</option>
             </select>
-
-            <label for="plat2">Plat 2 :</label>
-            <select id="plat2">
-                <option value="">Choisissez un plat</option>
-                <option value="Burger Classique">Burger Classique - 65 DH</option>
-                <option value="Pizza Margherita">Pizza Margherita - 70 DH</option>
-                <option value="Tajine d'Agneau">Tajine d'Agneau - 80 DH</option>
-                <option value="Glace Vanille">Glace Vanille - 25 DH</option>
-            </select>
-
-            <label for="plat3">Plat 3 :</label>
-            <select id="plat3">
-                <option value="">Choisissez un plat</option>
-                <option value="Burger Classique">Burger Classique - 65 DH</option>
-                <option value="Pizza Margherita">Pizza Margherita - 70 DH</option>
-                <option value="Tajine d'Agneau">Tajine d'Agneau - 80 DH</option>
-                <option value="Glace Vanille">Glace Vanille - 25 DH</option>
-            </select>
-
-            <button type="submit">Finaliser la commande</button>
-        </form>
-
-        <div class="confirmation" id="confirmation"></div>
+            <button onclick="ajouterPlat()">Plus</button>
+        </div>
+        <button onclick="finaliserCommande()">Finaliser la commande</button>
     </section>
 
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 Madlal Food. Tous droits réservés.</p>
+        <p><a href="#accueil">Retour en haut</a></p>
+    </footer>
+
+    <!-- Script pour EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        function finaliserCommande(event) {
-            event.preventDefault(); // Empêche le rechargement de la page
+        // Initialisation d'EmailJS
+        emailjs.init("VOTRE_USER_ID"); // Remplacez par votre User ID
+        const serviceID = "VOTRE_SERVICE_ID"; // Remplacez par votre Service ID
+        const templateID = "VOTRE_TEMPLATE_ID"; // Remplacez par votre Template ID
 
-            // Récupérer les plats sélectionnés
-            const plat1 = document.getElementById('plat1').value;
-            const plat2 = document.getElementById('plat2').value;
-            const plat3 = document.getElementById('plat3').value;
+        let platsCommandes = [];
 
-            // Afficher un message de confirmation
-            const confirmation = document.getElementById('confirmation');
-            confirmation.innerHTML = `
-                <p>Merci pour votre commande !</p>
-                <p>Veuillez appeler le <strong>+212 644018101</strong> pour confirmer.</p>
-                <p>Plats commandés : ${plat1}, ${plat2}, ${plat3}</p>
-            `;
+        function ajouterPlat() {
+            const select = document.querySelector(".choix-plat");
+            const plat = select.value;
+            platsCommandes.push(plat);
+            alert(`Plat ajouté : ${plat}`);
+        }
+
+        function finaliserCommande() {
+            if (platsCommandes.length === 0) {
+                alert("Veuillez ajouter au moins un plat avant de finaliser la commande.");
+                return;
+            }
+
+            const platsText = platsCommandes.join("\n");
+
+            // Envoi de l'email via EmailJS
+            emailjs.send(service_jas4mz7, template_hh9kdmi, {
+                plats: platsText,
+            })
+            .then(() => {
+                alert("Commande finalisée ! Appelez le +212 644018101 pour confirmer.");
+                platsCommandes = []; // Réinitialiser la liste des plats
+            })
+            .catch((error) => {
+                console.error("Erreur lors de l'envoi de l'email :", error);
+                alert("Une erreur s'est produite. Veuillez réessayer.");
+            });
         }
     </script>
 </body>
-</html>
+    </html>
