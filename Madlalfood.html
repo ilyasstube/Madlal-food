@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlal Food - Restaurant de Luxe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Fond noir */
+            color: #fff;
+        }
+        header {
+            background-color: #d4af37; /* Or */
+            padding: 20px;
+            text-align: center;
+            color: #1a1a1a;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        nav {
+            background-color: #333; /* Gris foncé */
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #d4af37; /* Or */
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: #262626; /* Gris très foncé */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #d4af37; /* Or */
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background-color: #333; /* Gris foncé */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .menu-item h3 {
+            margin: 15px 0 10px;
+            font-size: 24px;
+            color: #d4af37; /* Or */
+        }
+        .menu-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #ccc;
+        }
+        .menu-item span {
+            display: block;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .avis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .avis-item {
+            background-color: #333; /* Gris foncé */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .avis-item h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #d4af37; /* Or */
+        }
+        .avis-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #ccc;
+        }
+        .stars {
+            color: #ffd700; /* Couleur or pour les étoiles */
+            font-size: 20px;
+        }
+        footer {
+            background-color: #333; /* Gris foncé */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer a {
+            color: #d4af37; /* Or */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h1>Madlal Food</h1>
+        <p>Le luxe à portée de fourchette.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#menu">Menu</a>
+        <a href="#apropos">À propos</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil">
+        <h2>Bienvenue chez Madlal Food</h2>
+        <p>Découvrez des saveurs raffinées dans un cadre luxueux. Notre menu varié saura satisfaire vos papilles.</p>
+    </section>
+
+    <!-- Section Menu -->
+    <section id="menu">
+        <h2>Notre Menu</h2>
+        <div class="menu-grid">
+            <!-- Burgers -->
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Burger">
+                <h3>Burger Classique</h3>
+                <p>Un burger juteux avec du bœuf Angus, du cheddar et des légumes frais.</p>
+                <span>60 DH</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Burger">
+                <h3>Burger Végétarien</h3>
+                <p>Un burger savoureux avec des légumes grillés et une sauce maison.</p>
+                <span>55 DH</span>
+            </div>
+            <!-- Ajoutez 8 autres burgers ici -->
+
+            <!-- Tacos -->
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Tacos">
+                <h3>Tacos Mexicains</h3>
+                <p>Des tacos garnis de poulet mariné, de guacamole et de salsa maison.</p>
+                <span>50 DH</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1624302265337-244c0f9e76f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Tacos">
+                <h3>Tacos Boeuf</h3>
+                <p>Des tacos garnis de bœuf épicé, de fromage fondu et de légumes frais.</p>
+                <span>55 DH</span>
+            </div>
+            <!-- Ajoutez 8 autres tacos ici -->
+
+            <!-- Pizzas -->
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Pizza">
+                <h3>Pizza Margherita</h3>
+                <p>Une pizza fine avec de la mozzarella, des tomates fraîches et du basilic.</p>
+                <span>70 DH</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Pizza">
+                <h3>Pizza Pepperoni</h3>
+                <p>Une pizza généreuse avec du pepperoni épicé et du fromage fondu.</p>
+                <span>75 DH</span>
+            </div>
+            <!-- Ajoutez 8 autres pizzas ici -->
+
+            <!-- Plats de Poulet -->
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1625937323772-2f0b2a5a5f5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Poulet">
+                <h3>Poulet Rôti</h3>
+                <p>Un poulet rôti croustillant accompagné de légumes de saison.</p>
+                <span>80 DH</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1606728035253-49e8a3a81b5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Poulet">
+                <h3>Poulet Grillé</h3>
+                <p>Un poulet grillé mariné aux herbes, servi avec une sauce maison.</p>
+                <span>85 DH</span>
+            </div>
+            <!-- Ajoutez 8 autres plats de poulet ici -->
+
+            <!-- Jus -->
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Jus">
+                <h3>Jus d'Orange Pressé</h3>
+                <p>Un jus d'orange fraîchement pressé, riche en vitamines.</p>
+                <span>25 DH</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Jus">
+                <h3>Jus de Mangue</h3>
+                <p>Un jus de mangue frais et sucré, parfait pour se rafraîchir.</p>
+                <span>30 DH</span>
+            </div>
+            <!-- Ajoutez 8 autres jus ici -->
+
+            <!-- Glaces -->
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Glace">
+                <h3>Glace Vanille</h3>
+                <p>Une glace onctueuse à la vanille, parfaite pour les amateurs de classiques.</p>
+                <span>20 DH</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Glace">
+                <h3>Glace Chocolat</h3>
+                <p>Une glace riche en chocolat, pour les amateurs de saveurs intenses.</p>
+                <span>25 DH</span>
+            </div>
+            <!-- Ajoutez 8 autres glaces ici -->
+
+            <!-- Smoothies -->
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Smoothie">
+                <h3>Smoothie Tropical</h3>
+                <p>Un mélange exotique de mangue, ananas et banane.</p>
+                <span>35 DH</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Smoothie">
+                <h3>Smoothie Fraise</h3>
+                <p>Un smoothie rafraîchissant à la fraise et au yaourt.</p>
+                <span>30 DH</span>
+            </div>
+            <!-- Ajoutez 8 autres smoothies ici -->
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos">
+        <h2>À propos de nous</h2>
+        <p>Madlal Food est un restaurant de luxe qui allie tradition et modernité. Nous nous engageons à vous offrir une expérience culinaire inoubliable. Notre équipe de chefs passionnés utilise des ingrédients frais et locaux pour créer des plats savoureux et raffinés. Que ce soit pour un déjeuner rapide ou un dîner gastronomique, Madlal Food est l'endroit idéal pour satisfaire vos papilles.</p>
+        <p>Nous croyons en la qualité, la créativité et le service exceptionnel. Venez découvrir pourquoi nos clients nous adorent !</p>
+    </section>
+
+    <!-- Section Avis -->
+    <section id="avis">
+        <h2>Avis Clients</h2>
+        <div class="avis-grid">
+            <div class="avis-item">
+                <h3>Karim B.</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Un restaurant exceptionnel ! Les plats sont délicieux et le service est impeccable."</p>
+            </div>
+            <div class="avis-item">
+                <h3>Leila M.</h3>
+                <div class="stars">★★★★★</div>
+                <p>"J'ai adoré l'ambiance et les saveurs. Le poulet rôti est un régal !"</p>
+            </div>
+            <div class="avis-item">
+                <h3>Youssef L.</h3>
+                <div class="stars">★★★★☆</div>
+                <p>"Très bon restaurant, mais un peu cher. Les pizzas sont à tomber !"</p>
+            </div>
+            <div class="avis-item">
+                <h3>Nadia S.</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Un must à Casablanca. Les smoothies sont incroyables !"</p>
+            </div>
+            <!-- Ajoutez 16 autres avis ici -->
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <p>Adresse : Ain Diab, Casablanca, Maroc</p>
+        <p>Téléphone : +212 644018101</p>
+        <p>Email : ilyassmadlal18@gmail.com</p>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 Madlal Food. Tous droits réservés.</p>
+        <p><a href="#accueil">Retour en haut</a></p>
+    </footer>
+</body>
+</html>
